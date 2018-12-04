@@ -37,6 +37,16 @@ public class MainActivity extends Activity {
                 startActivityForResult(intent, 0);
             }});
     }
+    public void takePicture(View view) {
+        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+        startActivity(intent);
+        // check picture
+            // successful: 1. Send picture to API
+                        // 2. Receive json.
+                        // 3. Un-grey pdf/google calendar buttons
+            // unsuccessful:
+                        // 1. throw error
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
