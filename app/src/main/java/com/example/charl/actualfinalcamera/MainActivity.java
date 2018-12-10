@@ -12,6 +12,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.ml.vision.FirebaseVision;
+import com.google.firebase.ml.vision.common.FirebaseVisionImage;
+import com.google.firebase.ml.vision.document.FirebaseVisionDocumentTextRecognizer;
+
 
 public class MainActivity extends Activity {
 
@@ -60,10 +64,20 @@ public class MainActivity extends Activity {
             try {
                 bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(targetUri));
                 targetImage.setImageBitmap(bitmap);
+
+                //image sent to google API
+                FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
+                FirebaseVisionDocumentTextRecognizer detector = FirebaseVision.getInstance()
+                        .getCloudDocumentTextRecognizer();
+                // ok so i took this stuff from their page, we still have to login and everything
+                // and we may be missing some gradle dependencies, but this SHOULD end up as
+                // the actual object we parse.
+                // https://firebase.google.com/docs/ml-kit/android/recognize-text
             } catch (FileNotFoundException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+
         }
     }
 }
