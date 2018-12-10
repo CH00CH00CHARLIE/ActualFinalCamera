@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1032784963134",
+    "firebase_url": "https://calender-snap.firebaseio.com",
+    "project_id": "calender-snap",
+    "storage_bucket": "calender-snap.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032784963134:android:909169361a93d81e",
+        "android_client_info": {
+          "package_name": "com.example.charl.actualfinalcamera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032784963134-hieq6fjkb4rq0u7i3v9dtfrmof589ejk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmO5MRGLV4eEPWh_6QI06mvyHUFEIRwFI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
